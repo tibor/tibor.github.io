@@ -1,1 +1,84 @@
-Hello World
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title></title>
+<style>
+@font-face{
+font-family: Work Sans;
+src: url();
+font-weight:400;
+}
+
+html{
+--lh:1.4;
+font-size: 1.5em;
+}
+
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+
+body{
+max-width:calc(var(--lh) * 15rem);
+margin: calc(var(--lh) * 2rem) auto;
+font-family: Arial;
+line-height: var(--lh);
+}
+
+.ws body{
+font-family: Work Sans;
+}
+
+a{
+text-decoration: none;
+color:currentColor;
+box-shadow: inset 0 -0.5rem 0 hsl(175, 35%, 80%);
+}
+
+a::after{
+
+}
+
+h1{
+font-size: calc(var(--lh) * 2rem);
+line-height: 1;
+font-weight:400;
+}
+
+li{
+list-style:none;
+margin-bottom: calc(var(--lh) * 0.5rem);
+}
+</style>
+</head>
+<body>
+<h1>Tibor Martini</h1>
+<ul>
+<li><a href="https://blendle.com/users/tibormartini">📰 Blendle</a></li>
+<li><a href="https://facebook.com/abouttibor">👥 Facebook</a></li>
+<li><a href="https://plus.google.com/TiborMartini">➕ Google Plus</a></li>
+<li><a href="https://instagram.com/ungeruehrt">📸 Instagram</a></li>
+<li><a href="https://periscope.tv/tibor">🎥 Periscope</a></li>
+<li><a href="">😺 Producthunt</a></li>
+<li><a href="">🦄 reddit</a></li>
+<li><a href="https://refind.com/tibor">🔍 Refind</a></li>
+<li><a href="https://snapchat.com/add/tibormartini">👻 Snapchat</a></li>
+<li>📺 Talkshow</li>
+<li><a href="https://twitter.com/tibor">🐥 Twitter</a></li>
+<li><a href="https://vine.co/tibor">🔁 Vine</a></li>
+</ul>
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+<script src="skripte/fontfaceobserver.js"></script>
+<script>
+var font = new FontFaceObserver('Work Sans', {
+  weight: 400
+});
+
+font.load().then(function () {
+document.getElementsByTagName('html')[0].classList.add('ws')
+});
+</script>
+</body>
+</html>
